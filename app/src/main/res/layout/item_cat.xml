@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    <variable
+        type="exam.catapp.sourceit.catapplication.model.Cat"
+        name="cat"/>
+
+</data>
+
+    <android.support.constraint.ConstraintLayout
+        android:background="?selectableItemBackground"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+    <ImageView
+        android:layout_height="56dp"
+        android:layout_width="56dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:transitionName="cat"
+        app:loadImageUrl="@{cat.imageUrl}"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/imageView"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/textViewName"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        tools:text="name" android:text="@{cat.name}"
+        android:textColor="@drawable/background"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/textViewBreed"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        tools:text="breed" android:text="@{cat.breed}"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"/>
+
+</android.support.constraint.ConstraintLayout>
+
+</layout>

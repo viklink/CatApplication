@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ImageView
+    tools:src="@tools:sample/avatars"
+    android:layout_margin="5dp"
+    android:layout_height="50dp"
+    android:layout_width="50dp"
+    android:id="@+id/imageView1"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"/>
