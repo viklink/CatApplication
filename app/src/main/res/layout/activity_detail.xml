@@ -14,64 +14,10 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent">
 
-    <ImageView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
-        app:loadImageUrl="@{cat.imageUrl}"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:transitionName="cat"
-        android:maxHeight="100dp"
-        android:maxWidth="150dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:id="@+id/imageView"/>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:id="@+id/textViewName"
-        tools:text="cat Name"
-        android:text="@{cat.name}"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:id="@+id/textViewAge"
-        tools:text="cat Age"
-        android:text="@{String.valueOf(cat.age)}"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName"/>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:id="@+id/textViewBreed"
-        tools:text="cat Breed"
-        android:text="@{cat.breed}"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAge"/>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="8dp"
-        android:id="@+id/textViewDescription"
-        tools:text="cat description"
-        android:text="@{cat.description}"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBreed"/>
+        <android.support.v4.view.ViewPager
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/viewPager"/>
 
 </android.support.constraint.ConstraintLayout>
 
