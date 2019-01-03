@@ -59,31 +59,4 @@ public class DetailActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         outState.putInt("id", id);
     }
-
-    /*private class CatFragmentAdapter extends FragmentStatePagerAdapter {
-        private List<Cat> catList;
-
-        public CatFragmentAdapter(FragmentManager fm, List<Cat> cats) {
-            super(fm);
-            catList = cats;
-        }
-
-        @Override
-        public Fragment getItem(int i) {
-
-            Cat cat = catList.get(i);
-            CatFragment catFragment = new CatFragment();
-            Bundle args = new Bundle();
-            args.putInt("id", cat.getId());
-            catFragment.setArguments(args);
-
-            return catFragment;
-        }
-
-        @Override
-        public int getCount() {
-            return catList != null ? catList.size() : 0;
-        }
-    }
-    */
 }
