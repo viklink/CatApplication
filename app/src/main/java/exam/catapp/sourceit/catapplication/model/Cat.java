@@ -19,6 +19,9 @@ public class Cat {
 
     public static String COLUMN_DESCRIPTION = "description";
 
+    public static String COLUMN_GENDER = "gender";
+
+
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -37,6 +40,9 @@ public class Cat {
 
     @ColumnInfo
     private String description;
+
+    @ColumnInfo
+    private String gender;
 
     public int getId() {
         return id;
@@ -85,4 +91,9 @@ public class Cat {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String getGender() {
+        return gender;
+    }
+    public void setGender(String gender) {this.gender = gender;}
 }

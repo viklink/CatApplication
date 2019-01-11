@@ -42,6 +42,7 @@ public class CatAdapter extends CursorAdapter {
         String breed = cursor.getString(cursor.getColumnIndex(Cat.COLUMN_BREED));
         String imageUrl = cursor.getString(cursor.getColumnIndex(Cat.COLUMN_IMAGE_URL));
         String description = cursor.getString(cursor.getColumnIndex(Cat.COLUMN_DESCRIPTION));
+        String gender = cursor.getString(cursor.getColumnIndex(Cat.COLUMN_GENDER));
 
         final Cat cat = new Cat();
         cat.setId(id);
@@ -50,6 +51,7 @@ public class CatAdapter extends CursorAdapter {
         cat.setBreed(breed);
         cat.setImageUrl(imageUrl);
         cat.setDescription(description);
+        cat.setGender(gender);
 
         binding.setCat(cat);
 

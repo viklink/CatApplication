@@ -24,6 +24,8 @@ public class DetailActivity extends AppCompatActivity {
 
     private int id;
 
+    CatDatabase catDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +38,8 @@ public class DetailActivity extends AppCompatActivity {
 
         final ActivityDetailBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_detail);
 
-        CatDatabase catDatabase = Room.databaseBuilder(this, CatDatabase.class, "cats.db").build();
+        //CatDatabase catDatabase = Room.databaseBuilder(this, CatDatabase.class, "cats.db").build();
+        catDatabase = DBInitializer.initialize(this);
         catDatabase.catDao().getCat(id).observe(this, new Observer<Cat>() {
             @Override
             public void onChanged(@Nullable Cat cat) {

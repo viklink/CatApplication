@@ -25,6 +25,11 @@ public class CatRecycleAdapter extends RecyclerView.Adapter<CatRecycleAdapter.Ca
 
     }
 
+    public void setData(List<Cat> cats) {
+        catList = cats;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public CatViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
